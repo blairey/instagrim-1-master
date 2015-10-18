@@ -14,7 +14,6 @@ nav {
     border: 2px;
     float: right;
 }
-
 header{
 background: #f06;
 background: linear-gradient(45deg, #CCCCFF, #99CCFF);
@@ -22,7 +21,7 @@ min-height: 100%;
 color:whitesmoke;
 text-align: center;
 }
-    
+
 body{
 background: #f06;
 background: linear-gradient(90deg, #CCCCFF, #99CCFF);

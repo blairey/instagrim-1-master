@@ -12,16 +12,12 @@ import com.datastax.driver.core.PreparedStatement;
 import com.datastax.driver.core.ResultSet;
 import com.datastax.driver.core.Row;
 import com.datastax.driver.core.Session;
-import com.datastax.driver.core.UDTValue;
-import com.datastax.driver.core.UserType;
 import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
 import uk.ac.dundee.computing.aec.instagrim.lib.AeSimpleSHA1;
 import uk.ac.dundee.computing.aec.instagrim.stores.Pic;
 import java.util.Set;
 import java.util.HashSet;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  *
@@ -33,7 +29,7 @@ public class User {
         
     }
     
-    public boolean RegisterUser(String username, String Password, String first_name , String last_name, String email, String street, String city, String zip){
+    public boolean RegisterUser(String username, String Password, String first_name , String last_name, String email){
         AeSimpleSHA1 sha1handler=  new AeSimpleSHA1();
         String EncodedPassword=null;
         try {
@@ -43,35 +39,17 @@ public class User {
             return false;
         }
         Session session = cluster.connect("instagrim");
-        PreparedStatement ps = session.prepare("INSERT INTO instagrim.userprofiles (login, first_name, last_name, password, email, addresses) VALUES(?,?,?,?,?,?);");
-        
+        PreparedStatement ps = session.prepare("INSERT INTO instagrim.userprofiles (login, first_name, last_name, password, email) VALUES(?,?,?,?, ?);");
         
         BoundStatement boundStatement = ps.bind();
-        
-        Set emailSet = new HashSet();
-        emailSet.add(email);
-
-        int iZip = Integer.parseInt(zip);
-        
-        UserType addressUType = cluster.getMetadata().getKeyspace("instagrim").getUserType("address");
-        UDTValue addressValue = addressUType.newValue()
-                .setString("street", street)
-                .setString("city", city)
-                .setInt("zip", iZip);
-                        
-        Map<String, UDTValue> addressesMap = new HashMap();
-        addressesMap.put("address", addressValue);
         
         boundStatement.setString("login", username);
         boundStatement.setString("password", EncodedPassword);
         boundStatement.setString("first_name", first_name);
         boundStatement.setString("last_name", last_name);
-        boundStatement.setSet("email", emailSet);
-        boundStatement.setMap("addresses", addressesMap);
-
+        boundStatement.setString("email", email);
         
-        session.execute(boundStatement);
-       
+       session.execute(boundStatement);
         //We are assuming this always works.  Also a transaction would be good here 
     
         return true;
