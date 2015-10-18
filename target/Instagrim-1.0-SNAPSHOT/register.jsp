@@ -33,6 +33,9 @@
                     <li>First name <input type="text" name="first_name"></li>
                     <li>Last name <input type="text" name="last_name"></li>
                     <li>Email<input type="email" name="email"></li>
+                    <li>Street<input type ="text" name="street"></li>
+                    <li>City<input type ="text" name="city"></li>
+                    <li>Zip<input type ="text" name="zip"></li>
                     
                 </ul>
                 <br/>
