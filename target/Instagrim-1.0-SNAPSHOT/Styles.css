@@ -16,14 +16,21 @@ nav {
 }
 
 header{
-background: #f06;
-background: linear-gradient(45deg, #CCCCFF, #99CCFF);
-min-height: 100%;
-color:whitesmoke;
-text-align: center;
+    text-align: center;
+    font-family:"brush script mt";
+    font-size: xx-large;
+    color: whitesmoke;
+    text-transform: lowercase;
+    border-style: solid;
+    border-color: wheat;
 }
-    
+
 body{
-background: #f06;
-background: linear-gradient(90deg, #CCCCFF, #99CCFF);
+    background-color:white;
+    background-image:url("pattern.png");
+    font-family: "brush script mt";
+    font-size: xx-large;
+    text-transform: lowercase;
+    color:beige;
 }
+   

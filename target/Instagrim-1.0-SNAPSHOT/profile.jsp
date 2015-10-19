@@ -16,8 +16,8 @@
     </head>
     <body>
         <header>
-            <h1>InstaGrim ! </h1>
-            <h2> Hello </h2>  
+            <h1>InstaGrim</h1>
+            <h2> the world at your fingertips </h2>  
         </header>
         <nav>
             <ul>
