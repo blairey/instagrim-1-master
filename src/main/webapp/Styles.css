@@ -10,16 +10,25 @@ and open the template in the editor.
 
 
 nav {
-    text-align: left;
+    text-align: center;
     border: 2px;
-    float: right;
+ 
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
+li{
+    display: inline;
+    
+}
 header{
     text-align: center;
     font-family:"brush script mt";
     font-size: xx-large;
-    color: whitesmoke;
+    color: lavenderblush;
     text-transform: lowercase;
     border-style: solid;
     border-color: wheat;
@@ -31,6 +40,6 @@ body{
     font-family: "brush script mt";
     font-size: xx-large;
     text-transform: lowercase;
-    color:beige;
+    color:darkslategray;
 }
    

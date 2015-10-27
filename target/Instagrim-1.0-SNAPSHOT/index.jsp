@@ -23,7 +23,7 @@
             <ul>
 
                
-                <li><a href="upload.jsp">Upload</a></li>
+                <li><a href="upload.jsp"><img src="upload.png" alt="Upload" style="width:400px;height:400px;border:0px"></a></li>
                     <%
                         
                         LoggedIn lg = (LoggedIn) session.getAttribute("LoggedIn");
@@ -35,8 +35,8 @@
                     <%}
                             }else{
                                 %>
-                 <li><a href="register.jsp">Register</a></li>
-                <li><a href="login.jsp">Login</a></li>
+                 <li><a href="register.jsp"><img src="register.png" alt="Register" style="width:400px;height:400px;border:0px"> </a></li>
+                <li><a href="login.jsp"><img src="LogIn.png" alt="Login" style="width:400px;height:400px;border:0px"></a></li>
                 <%
                                         
                             

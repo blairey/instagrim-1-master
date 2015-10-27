@@ -33,7 +33,7 @@
                     <li>Password <input type="password" name="password"></li>
                 </ul>
                 <br/>
-                <input type="submit" value="Login" 
+                <input type="submit" value="Login">
                 
             </form>
 

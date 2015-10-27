@@ -21,7 +21,7 @@
         </header>
         <nav>
             <ul>
-
+                <li class="Logout"><a href="Logout.jsp">Logout</a></li>
                 <li> <a href="index.jsp"> Home</a> </li>
                 <li><a href="upload.jsp">Upload</a></li>
                     <%
@@ -39,14 +39,13 @@
                  <li><a href="register.jsp">Register</a></li>
                 <li><a href="login.jsp">Login</a></li>
                 <%
-                                        
-                            
-                    }%>
+                    
+                   }%>
             </ul>
         </nav>
         <footer>
             <ul>
-                <li class="footer"><a href="/Instagrim">Home</a></li>
+                <li class="footer"><a href="Instagrim/index.jsp">Home</a></li>
                 <li>&COPY; Blaire Mcleod</li>
             </ul>
         </footer>
