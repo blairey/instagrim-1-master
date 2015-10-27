@@ -21,7 +21,6 @@
         </header>
         <nav>
             <ul>
-                <li class="Logout"><a href="Logout.jsp">Logout</a></li>
                 <li> <a href="index.jsp"> Home</a> </li>
                 <li><a href="upload.jsp">Upload</a></li>
                     <%
