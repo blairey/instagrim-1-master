@@ -31,7 +31,7 @@
                             String UserName = lg.getUsername();
                             if (lg.getlogedin()) {
                     %>
-                <li><a href="/Instagrim/Images/<%=lg.getUsername()%>">Your Images</a></li>
+                <li><a href="/blaireogram/Images/<%=lg.getUsername()%>">Your Images</a></li>
                     <%}
                             }else{
                                 %>
@@ -45,7 +45,7 @@
         </nav>
         <footer>
             <ul>
-                <li class="footer"><a href="/Instagrim">Home</a></li>
+                <li class="footer"><a href="/blaireogram">Home</a></li>
                 <li>&COPY; Blaire Mcleod</li>
             </ul>
         </footer>

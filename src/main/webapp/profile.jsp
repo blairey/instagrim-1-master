@@ -18,6 +18,7 @@
         <header>
             <h1>InstaGrim</h1>
             <h2> the world at your fingertips </h2>  
+            <h3> hello </h3>
         </header>
         <nav>
             <ul>
@@ -31,7 +32,7 @@
                             if (lg.getlogedin()) {
                     %>
 
-                <li><a href="/Instagrim/Images/<%=lg.getUsername()%>">Your Images</a></li>
+                <li><a href="/blaireogram/Images/<%=lg.getUsername()%>">Your Images</a></li>
                     <%}
                             }else{
                                 %>
@@ -44,7 +45,7 @@
         </nav>
         <footer>
             <ul>
-                <li class="footer"><a href="Instagrim/index.jsp">Home</a></li>
+                <li class="footer"><a href="blaireogram/index.jsp">Home</a></li>
                 <li>&COPY; Blaire Mcleod</li>
             </ul>
         </footer>
